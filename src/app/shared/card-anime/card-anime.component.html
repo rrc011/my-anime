@@ -1,0 +1,17 @@
+<ion-card>
+  <img [src]="anime.image_url" />
+  <ion-card-header>
+    <ion-card-subtitle>{{ anime.synopsis }}</ion-card-subtitle>
+    <ion-card-title>{{ anime.title }}</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-button
+      [color]="buttomStyle"
+      expand="block"
+      shape="round"
+      *ngIf="showButtom"
+      (click)="handler()"
+      >{{ buttomName }}</ion-button
+    >
+  </ion-card-content>
+</ion-card>

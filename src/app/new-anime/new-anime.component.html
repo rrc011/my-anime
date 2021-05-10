@@ -1,0 +1,19 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-title>Modal Content</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismissModal()">Close</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar #searchbar (ionChange)="searchAnime($event)"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+<ion-content fullscreen>
+  <app-card-anime
+    *ngFor="let anime of lst"
+    [anime]="anime"
+    [buttomName]="'Add'"
+    (onAdd)="save($event)"
+  ></app-card-anime>
+</ion-content>
